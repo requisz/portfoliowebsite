@@ -153,9 +153,29 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html { font-family: var(--ff-poppins);
+        height: 100%;
+ }
 
-body { background: var(--smoky-black); }
+body {
+	background: linear-gradient(-45deg, #56565e, #9d7463, hsl(0, 32%, 44%), #56565e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 
 
