@@ -25,48 +25,48 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    #4b3832 3%, 
+    #3c2f2f 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    rgba(133, 68, 66, 0.251) 0%, 
+    rgba(60, 47, 47, 0) 100%
+  ), #3c2f2f;
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    #dfdbd8 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    #fff4e6 0%, 
+    rgba(190, 155, 123, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    #393736 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    #3c2f2f 0%, 
+    rgba(190, 155, 123, 0) 59.86%
+  ), #3c2f2f;
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    #dfdbd8 0%, 
-    hsla(0, 0%, 0%, 0) 50%
+    #fff4e6 0%, 
+    rgba(75, 56, 50, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    #dfdbd8
-    #dfdbd8
+    #fff4e6, 
+    #fff4e6
   );
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: #56565e;
-  --smoky-black: #b5c2c7;
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: #9d7463;
-  --vegas-gold: #9d7463;
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --jet: #4b3832; /* Updated to match the new color palette */
+  --onyx: #854442; /* Updated to match the new color palette */
+  --eerie-black-1: hsl(240, 2%, 13%); /* Keeping the same */
+  --eerie-black-2: #3c2f2f; /* Updated to match the new color palette */
+  --smoky-black: #be9b7b; /* Updated to match the new color palette */
+  --white-1: #fff4e6; /* Updated to match the new color palette */
+  --white-2: #fff4e6; /* Updated to match the new color palette */
+  --orange-yellow-crayola: #854442; /* Updated to match the new color palette */
+  --vegas-gold: #be9b7b; /* Updated to match the new color palette */
+  --light-gray: #fff4e6; /* Updated to match the new color palette */
+  --light-gray-70: rgba(255, 244, 230, 0.7); /* Updated to match the new color palette */
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -96,11 +96,11 @@
    * shadow
    */
   
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px rgba(75, 56, 50, 0.25);
+  --shadow-2: 0 16px 30px rgba(75, 56, 50, 0.25);
+  --shadow-3: 0 16px 40px rgba(75, 56, 50, 0.25);
+  --shadow-4: 0 25px 50px rgba(75, 56, 50, 0.15);
+  --shadow-5: 0 24px 80px rgba(75, 56, 50, 0.25);
 
   /**
    * transition
@@ -157,23 +157,14 @@ html { font-family: var(--ff-poppins);
         height: 100%;
  }
 
-body {
-	background: linear-gradient(-45deg, #56565e, #9d7463, hsl(0, 32%, 44%), #56565e);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+ body {
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+  height: 100vh;
 }
 
 
@@ -187,13 +178,28 @@ body {
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: linear-gradient(-45deg, var(--eerie-black-2), var(--orange-yellow-crayola), hsl(0, 32%, 44%), var(--eerie-black-2));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .separator {
   width: 100%;
@@ -366,7 +372,7 @@ main {
 
 .info-content .title {
   color: var(--white-1);
-  background: var(--onyx);
+  background: var(--eerie-black-1);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
@@ -659,7 +665,7 @@ button#send-button:hover {
 }
 
 .service-item span {
-  color: var(--vegas-gold);
+  color: var(--bittersweet-shimmer);
   font-weight: var(--fw-400);
   line-height: 2;
 }
@@ -905,7 +911,7 @@ button#send-button:hover {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--bittersweet-shimmer);
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -917,7 +923,7 @@ button#send-button:hover {
   left: -30px;
   width: 1px;
   height: calc(100% + 50px);
-  background: var(--jet);
+  background: var(--bittersweet-shimmer);
 }
 
 .timeline-item::after {
@@ -927,7 +933,7 @@ button#send-button:hover {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--bittersweet-shimmer);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
