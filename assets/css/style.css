@@ -1,19 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -56,17 +41,16 @@
 
   /* solid */
 
-  --jet: #4b3832; /* Updated to match the new color palette */
-  --onyx: #854442; /* Updated to match the new color palette */
-  --eerie-black-1: hsl(240, 2%, 13%); /* Keeping the same */
-  --eerie-black-2: #3c2f2f; /* Updated to match the new color palette */
-  --smoky-black: #be9b7b; /* Updated to match the new color palette */
-  --white-1: #fff4e6; /* Updated to match the new color palette */
-  --white-2: #fff4e6; /* Updated to match the new color palette */
-  --orange-yellow-crayola: #854442; /* Updated to match the new color palette */
-  --vegas-gold: #be9b7b; /* Updated to match the new color palette */
-  --light-gray: #fff4e6; /* Updated to match the new color palette */
-  --light-gray-70: rgba(255, 244, 230, 0.7); /* Updated to match the new color palette */
+  --jet: #4b3832; 
+  --onyx: #854442; 
+  --eerie-black-1: hsl(240, 2%, 13%); 
+  --eerie-black-2: #3c2f2f; 
+  --white-1: #fff4e6; 
+  --white-2: #fff4e6; 
+  --orange-yellow-crayola: #854442; 
+  --vegas-gold: #be9b7b; 
+  --light-gray: #fff4e6; 
+  --light-gray-70: rgba(255, 244, 230, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -1130,43 +1114,7 @@ button#send-button:hover {
   #PORTFOLIO
 \*-----------------------------------*/
 
-.filter-list { display: none; }
 
-.filter-select-box {
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.filter-select {
-  background: var(--eerie-black-2);
-  color: var(--light-gray);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-}
-
-.filter-select.active .select-icon { transform: rotate(0.5turn); }
-
-.select-list {
-  background: var(--eerie-black-2);
-  position: absolute;
-  top: calc(100% + 6px);
-  width: 100%;
-  padding: 6px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
-  z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: 0.15s ease-in-out;
-}
 
 .filter-select.active + .select-list {
   opacity: 1;
